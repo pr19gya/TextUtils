@@ -26,7 +26,9 @@ function App() {
     }, 3000);
   }
 
-  const toggleMode=()=>{
+  const toggleMode=(cls)=>{
+    console.log(primary);
+    document.body.classList.add('bg-'+cls)
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor='grey';
@@ -47,12 +49,12 @@ function App() {
       <Routes>
       <Route path="/about" element={<About />} />
           
-          {/* <Route path="/">
+          <Route path="/">
             
-            <Textform showAlert={showAlert} heading="Enter your text to analyze"/> */}
-       <Route path="/" element={<Textform heading="Enter the text to analyze below" showAlert={showAlert}/>} />
-          {/* </Route> */}
-        </Routes>
+            {/* <Textform showAlert={showAlert} heading="Enter your text to analyze"/> */}
+       <Route path="/" element={<Textform heading="Enter the text to analyze below" showAlert={showAlert}/>} /> 
+          </Route>
+         </Routes>
         </div>
         </Router>
       

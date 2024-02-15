@@ -53,7 +53,7 @@ const speak = () => {
   <button type="submit" className="btn btn-primary mx-1" onClick={handleClearClick}>Clear</button>
   <button type="submit" onClick={speak} className="btn btn-warning mx-1 my-2">Speak</button>
   <h3 className="my-2" style={{color : props.mode==='dark'?'white':'black'}}>Your Text Summary</h3>
-  <div>{text.split(" ").length} words</div>
+  <div>{text.split(" ").filter((element)=>{return element.length!=0}).length} words</div>
   <div >{text.length} characters</div>
   <div >{text.split(".").length-1} sentences</div>
   
